@@ -11,6 +11,11 @@
 <body>
 
     <div id="container"></div>
+    <!-- create id -->
+    <div id="example"></div>
+
+    <div id="w">     </div>
+
 
     <script type="text/babel">
         ReactDOM.render(
@@ -18,7 +23,33 @@
             document.getElementById('container')
         );
     </script>
+    <!-- connect component to id -->
+    <script type="text/babel">
+      ReactDOM.render(
+        <h3> hello world </h3> , document.getElementById('example')
+      );
+    </script>
     <h1>hello react!!</h1>
+
+    <script type="text/babel">
+    var What = React.createClass({
+      render : function () {
+        return (<h2> component bacon as variable</h2>);
+      }
+    });
+
+    ReactDOM.render(<What /> ,document.getElementById('w'));
+    </script>
+
+    <!-- <script type="text/babel">
+        var BuckysComponent = React.createClass({
+            render: function() {
+                return (<h2>This is a simple component</h2>);
+            }
+        });
+        ReactDOM.render(<BuckysComponent />, document.getElementById('w'));
+    </script> -->
+
 
 </body>
 </html>
